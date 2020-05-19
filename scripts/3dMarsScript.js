@@ -6,7 +6,7 @@ window.onload = function(){
     var renderer = new THREE.WebGLRenderer({alpha : true, antialias:true});
     var control = new THREE.OrbitControls(camera, renderer.domElement);  
     var loader = new THREE.ObjectLoader();
-    loader.load ('/3d_models/scene.json', function(object){
+    loader.load ('../3d_models/scene.json', function(object){
       scene.add(object);
       
     });
@@ -35,7 +35,7 @@ window.onload = function(){
   var renderer_rover = new THREE.WebGLRenderer({alpha : true, antialias:true});
   var control_rover = new THREE.OrbitControls(camera_rover, renderer_rover.domElement);  
   var loader_rover = new THREE.ObjectLoader();
-  loader_rover.load ('/3d_models/scene_rover.json', function(obj){
+  loader_rover.load ('../3d_models/scene_rover.json', function(obj){
     scene_rover.add(obj);
     
   });
