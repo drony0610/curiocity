@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 3px; }
+
+.container {
+  display: flex;
+  max-width: 1700px;
+  width: auto;
+  padding: 0 15px;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto; }
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+h1 {
+  font-size: calc(50px + 70 *(100vw / 1700));
+  color: #ffffff;
+  font-weight: 400; }
+
+h2 {
+  font-size: calc(9px + 8 *(100vw / 1700));
+  color: #ffffff;
+  font-weight: 200;
+  font-family: 'Poppins', sans-serif; }
+
+h3 {
+  font-size: calc(10px + 10 *(100vw / 1700));
+  font-weight: 700;
+  color: #ffffff; }
+
+p {
+  font-size: calc(10px + 10 *(100vw / 1700));
+  color: #ffffff; }
+
+section {
+  border: 5px solid #272727; }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: calc(50px + (70 + 70*0.7)*((100vw - 320px) / 1700)); } }
+
+.header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 70%, rgba(255, 255, 255, 0.2) 70% 70.1%, rgba(0, 0, 0, 0) 70.1%), linear-gradient(to right, rgba(0, 0, 0, 0) 60%, rgba(255, 255, 255, 0.2) 60% 60.1%, rgba(0, 0, 0, 0) 60.1%), linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(255, 255, 255, 0.2) 20% 20.1%, rgba(0, 0, 0, 0) 20.1%), url("../img/background_rover.jpg") center 30%/cover no-repeat;
+  height: 100vh;
+  width: 100%; }
+  .header .header-slogan {
+    margin: auto 0;
+    padding-bottom: 30px; }
+  .header span {
+    white-space: pre-line;
+    font-size: calc(25px + 25 *(100vw / 1700));
+    opacity: 0.6;
+    color: #ffffff; }
+  .header .header-bottom {
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px; }
+    .header .header-bottom :nth-child(even) {
+      padding-right: 20px; }
+    .header .header-bottom p {
+      justify-content: flex-start;
+      margin-right: auto;
+      opacity: 0.8; }
+    .header .header-bottom a {
+      justify-self: flex-end;
+      color: #ffffff;
+      opacity: 0.8; }
+  .header .container {
+    flex-direction: column;
+    justify-content: center; }
+
+@media (max-width: 768px) {
+  .header .header-slogan {
+    text-align: center; } }
+
+.planet-info {
+  background: #222222;
+  width: 100%; }
+  .planet-info .container {
+    flex-direction: column; }
+    .planet-info .container :nth-child(1) {
+      margin: auto 0; }
+    .planet-info .container span {
+      font-weight: 700;
+      color: #ffffff; }
+    .planet-info .container p {
+      color: gainsboro;
+      line-height: 40px; }
+
+.planet-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid rgba(255, 255, 255, 0.2); }
+  .planet-content ::before {
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    bottom: 0;
+    left: 0; }
+  .planet-content ::after {
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    top: 0;
+    right: 0; }
+
+.planet-render {
+  text-align: center; }
+  .planet-render h2 {
+    padding-bottom: 10px; }
+  .planet-render .render {
+    max-width: 550px;
+    max-height: 550px;
+    height: 100%;
+    width: 100%; }
+
+.planet-bottom {
+  clear: both;
+  justify-self: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px; }
+  .planet-bottom h2 {
+    text-align: end;
+    padding-bottom: 20px; }
+
+.mission-goals {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), url("../img/mission_background.jpg") center 30%/cover no-repeat; }
+  .mission-goals .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto 0; }
+  .mission-goals .mission-bottom {
+    padding-bottom: 10px; }
+    .mission-goals .mission-bottom h2 {
+      text-align: end;
+      padding-bottom: 20px; }
+
+.container {
+  flex-direction: column; }
+
+.card {
+  position: relative;
+  display: flex;
+  width: 23%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer; }
+  .card:hover ::before {
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    bottom: 0;
+    left: 0; }
+  .card:hover ::after {
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    top: 0;
+    right: 0; }
+  .card img {
+    width: 60px;
+    height: 60px;
+    padding: 10px 0; }
+  .card p {
+    padding: 10px 0;
+    font-size: calc(8px + 8 *(100vw / 1700)); }
+
+.specifications {
+  width: 100%;
+  height: 100vh;
+  background: #222222; }
+
+.rover-render {
+  width: 700px;
+  height: 700px;
+  margin: auto; }
+
+.specifications-content {
+  display: flex;
+  flex-direction: row;
+  margin: auto; }
+
+.specifications-bottom h2 {
+  text-align: end;
+  padding-bottom: 20px; }
+
+.older-expeditions {
+  width: 100%;
+  height: 100vh;
+  background: #222222; }
+  .older-expeditions .container .first-expedition_container {
+    margin-top: auto; }
+  .older-expeditions .container .second-expedition_container {
+    margin-bottom: auto; }
+  .older-expeditions .container .first-expedition_container p, .older-expeditions .container .second-expedition_container p {
+    font-size: calc(8px + 8 *(100vw / 1700));
+    height: 100%;
+    transform: translateY(25%);
+    padding: 0 5%;
+    text-align: center; }
+
+.image-sojourner {
+  display: block;
+  float: left;
+  height: 370px;
+  width: 370px;
+  border-radius: 200px;
+  border: 7px solid #333333;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 50.1%), url("/img/Sojourner.jpg") center 30%/cover no-repeat;
+  text-align: center;
+  line-height: 490px;
+  font-size: calc(10px + 10 *(100vw / 1700));
+  color: #ffffff;
+  margin-right: 3%; }
+
+.image-opportunity {
+  display: block;
+  float: right;
+  height: 370px;
+  width: 370px;
+  border-radius: 200px;
+  border: 7px solid #333333;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 50.1%), url("/img/mars_car.jpg") center 30%/cover no-repeat;
+  text-align: center;
+  line-height: 490px;
+  font-size: calc(10px + 10 *(100vw / 1700));
+  color: #ffffff;
+  margin-left: 3%; }
+
+.expeditions-bottom h2 {
+  text-align: end;
+  padding-bottom: 20px; }
+
+.description {
+  width: 100%;
+  height: 100vh;
+  background: url("/img/curiosity_split_bg.png") center 30%/cover no-repeat;
+  background-color: #222222; }
+
+.description-bottom h2 {
+  text-align: end;
+  padding-bottom: 20px; }
