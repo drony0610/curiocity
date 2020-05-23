@@ -55,6 +55,24 @@ window.onload = function(){
         }
         animateRover();
 
-  
+        function myFunction(x) {
+          if (x.matches) { // If media query matches
+            renderer.setSize(300,300);
+            renderer_rover.setSize(300, 300);
+            planet_container.style.width = "350px"
+            planet_container.style.height = "350px"
+            rover_container.style.width = "300px"
+            rover_container.style.height = "300px"
+            control.enabled = false;
+            control_rover.enabled = false;
+          }
+          else{
+
+          }
+        }
+
+        var x = window.matchMedia("(max-width: 600px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
 
 }
