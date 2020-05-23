@@ -67,7 +67,14 @@ window.onload = function(){
             control_rover.enabled = false;
           }
           else{
-
+            renderer.setSize(550,550);
+            renderer_rover.setSize(700, 700);
+            planet_container.style.width = "auto"
+            planet_container.style.height = "auto"
+            rover_container.style.width = "auto"
+            rover_container.style.height = "auto"
+            control.enabled = true;
+            control_rover.enabled = true;
           }
         }
 
